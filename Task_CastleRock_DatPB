@@ -1,0 +1,16 @@
+March 19, 2013:
+	Add a file upload button next to the "Property Card Picture or File" : 4h
+	This Report in the SW is missing this property: 1506 W 22nd St, Jasper, AL 35501 -This property is not inspected : 1h
+	Inventory Status Information
+	Allow Year Built field to be less than 1900 : 0.5
+	Need 2 buttons made that sends an email to Jason for properties that need pricing.
+	
+OT : 0.5h
+
+March 20, 2013:
+	Need 2 buttons made that sends an email to Jason for properties that need pricing.
+	This Report in the SW is missing this property: 1506 W 22nd St, Jasper, AL 35501 -This property is not inspected : 3
+	Also add a field for GIS Map link. Allow it to be a clickable URL : 0.5
+	Please update the "Loan Term" field to "20" This number is always there. Currently it is "15" : 0.25
+	Need default page to be picture grid when deleting a picture. : 1
+	
