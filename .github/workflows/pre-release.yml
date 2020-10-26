@@ -17,13 +17,13 @@ jobs:
           fetch-depth: 0
       - name: "Get latest tag"
         id: latest_tag
-        run: echo "::set-output name=name::$(echo $(git tag --sort=-committerdate | head -1))"
+        run: echo "::set-output name=name::$(git tag --sort=-committerdate | head -1)"
       - name: "Get second latest tag"
         id: second_latest_tag
-        run: echo "::set-output name=name::$(echo $(git tag --sort=-committerdate | head -2 | tail -1))"
+        run: echo "::set-output name=name::$(git tag --sort=-committerdate | head -2 | tail -1)"
       - name: "Get changelog"
         id: changelog
-        run: echo "::set-output name=changelog::$(echo $(git log  --pretty=format:' * %s %n' ${steps.second_latest_tag.outputs.name}..${steps.latest_tag.outputs.name}))"
+        run: echo "::set-output name=changelog::$(echo $(git log --pretty=format:' * %s %n' ${{ steps.second_latest_tag.outputs.name }}..${{ steps.latest_tag.outputs.name }}))"
       - name: Create Release
         id: create_release
         uses: actions/create-release@latest
